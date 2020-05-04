@@ -31,8 +31,6 @@ The following diagram shows the steps included in the deployment pipeline:
 
 ![](images/pipeline.svg)
 
-The application used in this pipeline is a JAX-RS application which is available on GitHub and is imported into Gogs during the setup process:
-[https://github.com/OpenShiftDemos/openshift-tasks](https://github.com/OpenShiftDemos/openshift-tasks/tree/eap-7)
 
 ## Prerequisites
 * 10+ GB memory
@@ -89,7 +87,7 @@ your own names and use the following to create the demo:
   oc new-app -n cicd -f cicd-template.yaml --param DEV_PROJECT=dev-project-name --param STAGE_PROJECT=stage-project-name
   ```
 
-# JBoss EAP vs WildFly
+# spring-boot-application (WIP)
 
 This demo by default uses the WildFly community image. You can use the JBoss EAP enterprise images provide by Red Hat by simply editing the 
 `tasks` build config in the _Tasks - Dev_ project and changing the builder image from `wildfly` to `jboss-eap70-openshift:1.5`. The demo would work exactly the same and would build the images using the JBoss EAP builder image. If using Quay, be sure not to leave the JBoss EAP images on a publicly accessible image repository. 
